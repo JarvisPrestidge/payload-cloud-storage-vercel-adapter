@@ -37,8 +37,7 @@
 
 > [!IMPORTANT]
 > Only for use with Payload CMS v3 (currently in alpha).
-
-> [!IMPORTANT]
+>
 > This package will be deprecated once the official Vercel Blob Storage adapter is released.
 
 <br/>
@@ -74,11 +73,12 @@ $ yarn add payload-cloud-storage-vercel-adapter
 
 ## 🔨 Usage
 
-Import the default `NIndexMap` export and instantiate a new instance.
+> [!NOTE]
+> Requirements:
+>
+> -   Payload v3
 
-#### Constructor
-
-You can optionally pass an array of indexes and/or an array of initial data into the constructor, in which case NIndexMap will use those index keys to cache all inital and future data set on the instance. Otherwise, NIndexMap will behave similarly to native map, that is until you to decide to add an index.
+Add the plugin within your Payload config as follows, passing in your Vercel Blob Storage token and storeId, and optionally any upload options.
 
 ```typescript
 import path from "path";
@@ -107,16 +107,16 @@ export default buildConfig({
 
 ## ⚙️ Plugin Configuration
 
-This pluing allows for the following configuration options:
+This plugin allows for the following configuration options to be passed to the vercel package:
 
-| Name                               | Type    | Required                                                                                                                         | Description                                                                                     |
-| ---------------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `token`                            | string  | <img src="https://github.com/bjss/eng-blocks-frontend-exemplar/assets/6669336/5c41ecfa-51c8-475f-964d-af733eb70d51" width="24"/> | Your Vercel API token.                                                                          |
-| `storeId`                          | string  | [![check][check-icon]][]                                                                                                         | The identifier of your Vercel storage.                                                          |
-| `uploadOptions`                    | object  | No                                                                                                                               | An object specifying options for uploads.                                                       |
-| `uploadOptions.access`             | string  | No                                                                                                                               | Determines the access level for uploaded items. Default: `public`.                              |
-| `uploadOptions.addRandomSuffix`    | boolean | No                                                                                                                               | Indicates whether to add a random suffix to uploaded filenames. Default: `false`.               |
-| `uploadOptions.cacheControlMaxAge` | number  | No                                                                                                                               | Specifies the maximum age for cache control headers (in seconds). Default: `31536000` (1 year). |
+| Name                               | Type    | Required | Description                                                                                     |
+| ---------------------------------- | ------- | -------- | ----------------------------------------------------------------------------------------------- |
+| `token`                            | string  | Yes      | Your Vercel API token.                                                                          |
+| `storeId`                          | string  | Yes      | The identifier of your Vercel storage.                                                          |
+| `uploadOptions`                    | object  | No       | An object specifying options for uploads.                                                       |
+| `uploadOptions.access`             | string  | No       | Determines the access level for uploaded items. Default: `public`.                              |
+| `uploadOptions.addRandomSuffix`    | boolean | No       | Indicates whether to add a random suffix to uploaded filenames. Default: `false`.               |
+| `uploadOptions.cacheControlMaxAge` | number  | No       | Specifies the maximum age for cache control headers (in seconds). Default: `31536000` (1 year). |
 
 ## ❤️ Contributing
 
