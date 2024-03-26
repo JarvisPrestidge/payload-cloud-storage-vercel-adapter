@@ -66,7 +66,7 @@ $ yarn add payload-cloud-storage-vercel-adapter
 ```
 
 ```bash
-$ yarn add payload-cloud-storage-vercel-adapter
+$ pnpm add payload-cloud-storage-vercel-adapter
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
