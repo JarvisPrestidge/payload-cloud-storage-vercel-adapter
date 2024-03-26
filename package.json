@@ -1,0 +1,86 @@
+{
+    "name": "payload-cloud-storage-vercel-adapter",
+    "version": "0.1.0",
+    "description": "Payload Cloud Storage Vercel Adapter",
+    "author": "Jarvis Prestidge <jarvisprestidge@gmail.com>",
+    "license": "MIT",
+    "type": "module",
+    "funding": "https://github.com/sponsors/jarvisprestidge",
+    "homepage": "https://github.com/jarvisprestidge/payload-cloud-storage-vercel-adapter#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jarvisprestidge/payload-cloud-storage-vercel-adapter.git"
+    },
+    "bugs": "https://github.com/jarvisprestidge/payload-cloud-storage-vercel-adapter/issues",
+    "keywords": [
+        "cms",
+        "payload",
+        "payload cms",
+        "cloud storage",
+        "vercel",
+        "vercel adapter",
+        "typescript"
+    ],
+    "sideEffects": false,
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.mjs",
+            "require": "./dist/index.cjs"
+        }
+    },
+    "main": "./dist/index.js",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "typesVersions": {
+        "*": {
+            "*": [
+                "./dist/*",
+                "./dist/index.d.ts"
+            ]
+        }
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "files": [
+        "dist",
+        "package.json",
+        "pnpm-lock.yaml",
+        "README.md"
+    ],
+    "scripts": {
+        "dev": "tsup --watch",
+        "build": "tsup",
+        "lint": "eslint --cache .",
+        "lint:fix": "eslint --fix --cache .",
+        "format": "prettier --write --cache .",
+        "type-check": "tsc --noEmit",
+        "test": "vitest",
+        "release:version": "changeset version && pnpm install --no-frozen-lockfile",
+        "release:publish": "pnpm build && changeset publish"
+    },
+    "devDependencies": {
+        "@changesets/cli": "^2.27.1",
+        "@ianvs/prettier-plugin-sort-imports": "^4.2.1",
+        "@payloadcms/plugin-cloud-storage": "3.0.0-alpha.49",
+        "@swc/core": "^1.4.8",
+        "@swc/types": "^0.1.6",
+        "@types/node": "^20.11.30",
+        "@typescript-eslint/eslint-plugin": "^7.3.1",
+        "@typescript-eslint/parser": "^7.3.1",
+        "@vercel/blob": "^0.22.1",
+        "eslint": "^8.57.0",
+        "eslint-config-prettier": "^9.1.0",
+        "payload": "3.0.0-alpha.49",
+        "prettier": "^3.2.5",
+        "tsup": "^8.0.2",
+        "typescript": "^5.4.3",
+        "vitest": "^1.4.0"
+    },
+    "peerDependencies": {
+        "@payloadcms/plugin-cloud-storage": "3.0.0-alpha.49",
+        "@vercel/blob": "^0.22.1",
+        "payload": "3.0.0-alpha.49"
+    }
+}
