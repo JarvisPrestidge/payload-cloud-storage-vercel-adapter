@@ -6,14 +6,44 @@ import getHandleUpload from "./handleUpload";
 import getStaticHandler from "./staticHandler";
 
 export type VercelBlobAdapterArgs = {
+    /**
+     * Vercel API Token
+     *
+     * @type {string}
+     */
     token: string;
+    /**
+     * Vercel Store ID - Can be found in the Vercel Dashboard
+     *
+     * @type {string}
+     */
     storeId: string;
+    /**
+     * Vercel upload options
+     *
+     * @type {VercelBlobAdapterUploadOptions}
+     */
     uploadOptions?: VercelBlobAdapterUploadOptions;
 };
 
 export type VercelBlobAdapterUploadOptions = {
+    /**
+     * Access level for the uploaded file
+     *
+     * @type {"public"}
+     */
     access?: "public";
+    /**
+     *  Add a random suffix to the file name
+     *
+     * @type {boolean}
+     */
     addRandomSuffix?: boolean;
+    /**
+     * Cache control max age in seconds
+     *
+     * @type {number}
+     */
     cacheControlMaxAge?: number;
 };
 
@@ -23,6 +53,20 @@ const defaultUploadOptions: VercelBlobAdapterUploadOptions = {
     cacheControlMaxAge: 31536000
 };
 
+/**
+ * Vercel Blob Adapter
+ *
+ * @param {VercelBlobAdapterArgs} {
+ *     token,
+ *     storeId,
+ *     uploadOptions = {
+ *         access: "public",
+ *         addRandomSuffix: false,
+ *         cacheControlMaxAge: 31536000
+ *     }
+ * }
+ * @returns {*}  {Adapter}
+ */
 export const vercelBlobAdapter = ({ token, storeId, uploadOptions = {} }: VercelBlobAdapterArgs): Adapter => {
     const { access, addRandomSuffix, cacheControlMaxAge } = {
         ...defaultUploadOptions,
