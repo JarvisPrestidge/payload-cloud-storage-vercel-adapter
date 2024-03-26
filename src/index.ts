@@ -1,9 +1,9 @@
 import type { Adapter, GeneratedAdapter } from "@payloadcms/plugin-cloud-storage/types";
 
-import getGenerateUrl from "./generateURL";
-import getHandleDelete from "./handleDelete";
-import getHandleUpload from "./handleUpload";
-import getStaticHandler from "./staticHandler";
+import getHandleDelete from "./handlers/delete";
+import getStaticHandler from "./handlers/static";
+import getHandleUpload from "./handlers/upload";
+import getGenerateUrl from "./utils/generateURL";
 
 export type VercelBlobAdapterArgs = {
     /**

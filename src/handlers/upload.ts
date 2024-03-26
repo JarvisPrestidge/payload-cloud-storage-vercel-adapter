@@ -1,8 +1,7 @@
 import path from "path";
+import type { VercelBlobAdapterUploadOptions } from "../index";
 import type { HandleUpload } from "@payloadcms/plugin-cloud-storage/types";
 import { put } from "@vercel/blob";
-
-import type { VercelBlobAdapterUploadOptions } from "./index";
 
 type HandleUploadArgs = VercelBlobAdapterUploadOptions & {
     token: string;

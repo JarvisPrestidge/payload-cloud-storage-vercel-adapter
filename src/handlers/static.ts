@@ -3,7 +3,7 @@ import type { CollectionConfig } from "payload/types";
 import { StaticHandler } from "@payloadcms/plugin-cloud-storage/types";
 import { head } from "@vercel/blob";
 
-import { getFilePrefix } from "./utils/getFilePrefix";
+import { getFilePrefix } from "../utils/getFilePrefix";
 
 type StaticHanlderArgs = {
     baseUrl: string;

@@ -30,5 +30,8 @@ jobs:
             - name: Install Dependencies
               run: pnpm i --frozen-lockfile
 
+            - name: Check Typescript types
+              run: pnpn type-check
+
             - name: Test
               run: pnpm test
