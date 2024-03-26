@@ -1,5 +1,11 @@
 # payload-cloud-storage-vercel-adapter
 
+## 0.1.2
+
+### Patch Changes
+
+- 729265f: chore(deps): update dependency @swc/core to v1.4.11
+
 ## 0.1.1
 
 ### Patch Changes
