@@ -1,5 +1,11 @@
 # payload-cloud-storage-vercel-adapter
 
+## 0.1.3
+
+### Patch Changes
+
+- 4c37e7f: update project structure
+
 ## 0.1.2
 
 ### Patch Changes
