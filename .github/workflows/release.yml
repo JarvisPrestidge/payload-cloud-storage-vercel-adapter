@@ -31,9 +31,10 @@ jobs:
               uses: changesets/action@v1
               id: changesets
               with:
-                  publish: yarn release
-                  commit: version bump
-                  title: Next release
+                  commit: "chore(release): version packages"
+                  title: "chore(release): version packages"
+                  version: pnpm release:version
+                  publish: pnpm release:publish
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

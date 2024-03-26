@@ -1,4 +1,5 @@
 {
+    "$schema": "https://json.schemastore.org/package",
     "name": "payload-cloud-storage-vercel-adapter",
     "version": "0.1.0",
     "description": "Payload Cloud Storage Vercel Adapter",
@@ -25,7 +26,7 @@
     "exports": {
         ".": {
             "types": "./dist/index.d.ts",
-            "import": "./dist/index.mjs",
+            "import": "./dist/index.js",
             "require": "./dist/index.cjs"
         }
     },
@@ -57,7 +58,7 @@
         "format": "prettier --write --cache .",
         "type-check": "tsc --noEmit",
         "test": "vitest",
-        "release:version": "changeset version && pnpm install --no-frozen-lockfile",
+        "release:version": "changeset version",
         "release:publish": "pnpm build && changeset publish"
     },
     "devDependencies": {
