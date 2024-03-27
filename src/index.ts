@@ -54,7 +54,7 @@ const defaultUploadOptions: VercelBlobAdapterUploadOptions = {
 };
 
 /**
- * Vercel Blob Adapter
+ * Vercel Blob Adapter.
  *
  * @param {VercelBlobAdapterArgs} {
  *     token,
