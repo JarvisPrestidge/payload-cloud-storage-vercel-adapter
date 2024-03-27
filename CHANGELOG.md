@@ -1,5 +1,11 @@
 # payload-cloud-storage-vercel-adapter
 
+## 0.1.4
+
+### Patch Changes
+
+- fa1959a: update readme
+
 ## 0.1.3
 
 ### Patch Changes
