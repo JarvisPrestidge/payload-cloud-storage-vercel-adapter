@@ -1,5 +1,15 @@
 # payload-cloud-storage-vercel-adapter
 
+## 0.1.5
+
+### Patch Changes
+
+- 0a265a5: chore(deps): update dependency typescript to v5.4.4
+- a13afa5: rebuild lockfile
+- c6fbda3: chore(deps): update dependency @types/node to v20.12.4
+- d408986: chore(deps): update dependency @swc/core to v1.4.12
+- 9b07d4b: chore(deps): update dependency @swc/core to v1.4.12
+
 ## 0.1.4
 
 ### Patch Changes
