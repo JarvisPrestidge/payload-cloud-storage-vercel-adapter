@@ -6,17 +6,18 @@ import { head } from "@vercel/blob";
 import { getFilePrefix } from "../utils/getFilePrefix";
 
 type StaticHanlderArgs = {
+    token: string;
     baseUrl: string;
 };
 
-const getStaticHandler = ({ baseUrl }: StaticHanlderArgs, collection: CollectionConfig): StaticHandler => {
+const getStaticHandler = ({ token, baseUrl }: StaticHanlderArgs, collection: CollectionConfig): StaticHandler => {
     return async (req, { params: { filename } }) => {
         try {
             const prefix = await getFilePrefix({ req, collection });
 
             const fileUrl = `${baseUrl}/${path.posix.join(prefix, filename)}`;
 
-            const blobMetadata = await head(fileUrl);
+            const blobMetadata = await head(fileUrl, { token });
             if (!blobMetadata) {
                 return new Response(null, { status: 404, statusText: "Not Found" });
             }
