@@ -1,7 +1,7 @@
 {
     "$schema": "https://json.schemastore.org/package",
     "name": "payload-cloud-storage-vercel-adapter",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "description": "Payload Cloud Storage Vercel Adapter",
     "author": "Jarvis Prestidge <jarvisprestidge@gmail.com>",
     "license": "MIT",
