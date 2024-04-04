@@ -83,7 +83,7 @@ export const vercelBlobAdapter = ({ token, storeId, uploadOptions = {} }: Vercel
             handleUpload: getHandleUpload({ token, prefix, access, addRandomSuffix, cacheControlMaxAge }),
             handleDelete: getHandleDelete({ token, baseUrl, prefix }),
             generateURL: getGenerateUrl({ baseUrl, prefix }),
-            staticHandler: getStaticHandler({ baseUrl }, collection)
+            staticHandler: getStaticHandler({ token, baseUrl }, collection)
         };
     };
 };
