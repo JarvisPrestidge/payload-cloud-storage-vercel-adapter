@@ -20,7 +20,7 @@ specifiers:
 
 devDependencies:
   '@changesets/cli': 2.27.1
-  '@ianvs/prettier-plugin-sort-imports': 4.2.1_prettier@3.2.5
+  '@ianvs/prettier-plugin-sort-imports': 4.2.1_prettier@3.3.0
   '@payloadcms/plugin-cloud-storage': 3.0.0-alpha.54_payload@3.0.0-alpha.54
   '@swc/core': 1.4.12
   '@swc/types': 0.1.6
@@ -31,7 +31,7 @@ devDependencies:
   eslint: 8.57.0
   eslint-config-prettier: 9.1.0_eslint@8.57.0
   payload: 3.0.0-alpha.54_4pecbbimlcy2iom5t7ukmgmii4
-  prettier: 3.2.5
+  prettier: 3.3.0
   tsup: 8.0.2_4cyylbxkl5bcef7semp3rf2dfe
   typescript: 5.4.4
   vitest: 1.4.0_@types+node@20.12.4
@@ -928,7 +928,7 @@ packages:
     resolution: {integrity: sha512-6EwiSjwWYP7pTckG6I5eyFANjPhmPjUX9JRLUSfNPC7FX7zK9gyZAfUEaECL6ALTpGX5AjnBq3C9XmVWPitNpw==}
     dev: true
 
-  /@ianvs/prettier-plugin-sort-imports/4.2.1_prettier@3.2.5:
+  /@ianvs/prettier-plugin-sort-imports/4.2.1_prettier@3.3.0:
     resolution: {integrity: sha512-NKN1LVFWUDGDGr3vt+6Ey3qPeN/163uR1pOPAlkWpgvAqgxQ6kSdUf1F0it8aHUtKRUzEGcK38Wxd07O61d7+Q==}
     peerDependencies:
       '@vue/compiler-sfc': 2.7.x || 3.x
@@ -942,7 +942,7 @@ packages:
       '@babel/parser': 7.24.1
       '@babel/traverse': 7.24.1
       '@babel/types': 7.24.0
-      prettier: 3.2.5
+      prettier: 3.3.0
       semver: 7.6.0
     transitivePeerDependencies:
       - supports-color
@@ -4343,8 +4343,8 @@ packages:
     hasBin: true
     dev: true
 
-  /prettier/3.2.5:
-    resolution: {integrity: sha512-3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==}
+  /prettier/3.3.0:
+    resolution: {integrity: sha512-J9odKxERhCQ10OC2yb93583f6UnYutOeiV5i0zEDS7UGTdUt0u+y8erxl3lBKvwo/JHyyoEdXjwp4dke9oyZ/g==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true
