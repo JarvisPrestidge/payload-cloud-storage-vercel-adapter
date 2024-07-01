@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@changesets/cli': ^2.27.1
   '@ianvs/prettier-plugin-sort-imports': ^4.2.1
-  '@payloadcms/plugin-cloud-storage': 3.0.0-alpha.54
+  '@payloadcms/plugin-cloud-storage': 3.0.0-canary.f83d96a
   '@swc/core': ^1.4.8
   '@swc/types': ^0.1.6
   '@types/node': ^20.11.30
@@ -21,7 +21,7 @@ specifiers:
 devDependencies:
   '@changesets/cli': 2.27.1
   '@ianvs/prettier-plugin-sort-imports': 4.2.1_prettier@3.2.5
-  '@payloadcms/plugin-cloud-storage': 3.0.0-alpha.54_payload@3.0.0-alpha.54
+  '@payloadcms/plugin-cloud-storage': 3.0.0-canary.f83d96a_eaoslnny57boxi6mvbbgz2nlge
   '@swc/core': 1.4.12
   '@swc/types': 0.1.6
   '@types/node': 20.12.4
@@ -1042,15 +1042,16 @@ packages:
       fastq: 1.17.1
     dev: true
 
-  /@payloadcms/plugin-cloud-storage/3.0.0-alpha.54_payload@3.0.0-alpha.54:
-    resolution: {integrity: sha512-2ZJ19OYaFQI/a0BWcZWUDtDnRmhl4XsmXCNnaCqV+9VlxjEPHhPcbLRRt9n86PEs6D98zTSOQsxUT580WW10EQ==}
+  /@payloadcms/plugin-cloud-storage/3.0.0-canary.f83d96a_eaoslnny57boxi6mvbbgz2nlge:
+    resolution: {integrity: sha512-Siw8IuG+AF8Bf8XtqaP2hqIXXv7AdbkveAhXoMlr/1/9YRv8zhGq3tCKSkFyG3Tq+PZvvCvDiej0z+HJMd3FjA==}
     peerDependencies:
       '@aws-sdk/client-s3': ^3.525.0
       '@aws-sdk/lib-storage': ^3.525.0
       '@azure/abort-controller': ^1.0.0
       '@azure/storage-blob': ^12.11.0
       '@google-cloud/storage': ^7.7.0
-      payload: 3.0.0-alpha.54
+      '@vercel/blob': ^0.22.3
+      payload: 3.0.0-canary.f83d96a
     peerDependenciesMeta:
       '@aws-sdk/client-s3':
         optional: true
@@ -1062,7 +1063,10 @@ packages:
         optional: true
       '@google-cloud/storage':
         optional: true
+      '@vercel/blob':
+        optional: true
     dependencies:
+      '@vercel/blob': 0.22.2
       find-node-modules: 2.1.3
       payload: 3.0.0-alpha.54_4pecbbimlcy2iom5t7ukmgmii4
       range-parser: 1.2.1
