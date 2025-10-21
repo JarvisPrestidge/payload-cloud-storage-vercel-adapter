@@ -67,7 +67,7 @@
         "@payloadcms/plugin-cloud-storage": "3.0.0-alpha.54",
         "@swc/core": "^1.4.8",
         "@swc/types": "^0.1.6",
-        "@types/node": "^20.11.30",
+        "@types/node": "^22.0.0",
         "@typescript-eslint/eslint-plugin": "^7.3.1",
         "@typescript-eslint/parser": "^7.3.1",
         "@vercel/blob": "^0.22.1",
